@@ -87,3 +87,9 @@ reports/.gitkeep
 ## Portfolio use
 
 This demonstrates exploratory analysis of monitoring/scheduling data, group-level data transformations, ML evaluation with a real holdout set, and transparent carbon scenario modelling. Do not claim production deployment, causal optimisation, specific predictive accuracy, or realised emission reductions without additional evidence.
+
+## Additional measured baseline and feature comparison
+
+Run `python -m src.compare_models --data data/raw/dcgm.csv --output reports` to reproduce a second model comparison. Using the same 80/20 job-disjoint split, a log-target Ridge regressor achieved **R² 0.4213, MAE 0.03233 kWh/job**, while histogram gradient boosting achieved **R² 0.8713, MAE 0.00539 kWh/job** (about **83.3% lower MAE** than Ridge). The median-only baseline MAE was 0.03572 kWh/job.
+
+On a seeded subset of 2,500 held-out jobs, feature permutation by mean MAE increase ranked **duration**, **GPU count**, and **memory utilisation** highest. These associations are not causal feature effects; correlated input features can change rankings. Results: `reports/benchmark_comparison.json`. Completed-job duration means this is retrospective energy estimation rather than a pre-scheduling predictor.
