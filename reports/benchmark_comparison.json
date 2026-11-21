@@ -1,0 +1,21 @@
+{
+  "jobs": 74849,
+  "test_jobs": 14970,
+  "split": "80/20 job-disjoint, random_state=42",
+  "median_baseline": {"mae_kwh": 0.035722560676909376, "rmse_kwh": 0.12391153259051688, "r2": -0.08346287660609497},
+  "ridge_log_target": {"mae_kwh": 0.03232917257181755, "rmse_kwh": 0.09056158896687325, "r2": 0.4212664681673777},
+  "hist_gradient_boosting_log_target": {"mae_kwh": 0.0053930799402760205, "rmse_kwh": 0.04270548414591277, "r2": 0.871306124985007},
+  "permutation_importance": {
+    "method": "Mean MAE increase on 2500 held-out jobs, 3 shuffles per feature",
+    "features": {
+      "duration_sec": 0.03482524672249804,
+      "gpu_count": 0.012103210434217004,
+      "memory_utilization_pct": 0.009909533273468685,
+      "sm_utilization_pct": 0.005750264572613184,
+      "peak_gpu_memory_gb": 0.003141059826803358,
+      "pcie_rx_mb": 0.000489836411766904,
+      "pcie_tx_mb": 2.0118772085248268e-7
+    }
+  },
+  "caution": "Retrospective completed-job energy estimation, not pre-scheduling prediction. Features are associations, not causal drivers."
+}
