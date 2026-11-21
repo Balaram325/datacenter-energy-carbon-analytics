@@ -1,0 +1,14 @@
+{
+  "scenario": "Idealised energy-fraction shift to lower-carbon grid hours (not implemented scheduling)",
+  "jobs": 74849,
+  "total_measured_gpu_energy_kwh": 2657.3470322222224,
+  "baseline_grid_intensity_kgco2e_per_kwh_assumed": 0.65,
+  "cleaner_grid_intensity_kgco2e_per_kwh_assumed": 0.3,
+  "fraction_of_energy_flexible_assumed": 0.2,
+  "energy_shifted_kwh_assumed": 531.4694064444445,
+  "baseline_emissions_kgco2e_scenario": 1727.2755709444446,
+  "shifted_emissions_kgco2e_scenario": 1541.2612786888892,
+  "avoided_emissions_kgco2e_scenario": 186.01429225555535,
+  "avoided_emissions_pct_scenario": 10.769230769230756,
+  "limitations": "The data contains no measured time-varying grid intensity or verified job flexibility. No evidence of operational CO2 reduction or guaranteed scheduling feasibility."
+}

@@ -1,0 +1,28 @@
+{
+  "data_source": "data/raw/dcgm.csv",
+  "job_count": 74849,
+  "train_jobs": 59879,
+  "test_jobs": 14970,
+  "train_test_split": "80/20, job-disjoint, random_state=42",
+  "features": [
+    "gpu_count",
+    "duration_sec",
+    "sm_utilization_pct",
+    "memory_utilization_pct",
+    "peak_gpu_memory_gb",
+    "pcie_rx_mb",
+    "pcie_tx_mb"
+  ],
+  "target": "sum energyconsumed_joules per job converted to kWh",
+  "baseline_median": {
+    "mae_kwh": 0.035722560676909376,
+    "rmse_kwh": 0.12391153259051688,
+    "r2": -0.08346287660609497
+  },
+  "hist_gradient_boosting": {
+    "mae_kwh": 0.005396686635974256,
+    "rmse_kwh": 0.042740247991185254,
+    "r2": 0.8710965165468538
+  },
+  "caution": "Predictive association only; not measured energy savings or causal optimisation."
+}

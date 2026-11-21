@@ -1,0 +1,72 @@
+
+
+# 1. Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# 2. Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 3. Jupyter Notebook Cache
+.ipynb_checkpoints/
+
+# 4. Environment Variables and Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# 5. Machine Learning Model Files
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+
+# 6. Raw Datasets
+# Keep original datasets locally
+data/raw/*.csv
+data/raw/*.parquet
+data/raw/*.xlsx
+data/raw/*.json
+
+# Preserve the empty data directory
+!data/raw/.gitkeep
+
+# 7. Generated Prediction Reports
+# Avoid uploading large prediction datasets
+reports/*.csv
+reports/*.parquet
+
+# 8. Keep Evaluation Graphs
+# PNG graphs in reports/ are intentionally tracked
+
+# 9. Local Logs and Temporary Files
+*.log
+*.tmp
+*.temp
+*.bak
+temp/
+tmp/
+
+# 10. Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 11. IDE Files
+.vscode/
+.idea/
+
+# 12. Build Files
+build/
+dist/
+*.egg-info/
